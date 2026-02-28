@@ -1,0 +1,6 @@
+Information Retrieval Instruction Project1 2026.pdf
+__pycache__/
+*.pyc
+venv/*
+TripAdvisorTrainingDataProject1/*
+dump.ipynb
