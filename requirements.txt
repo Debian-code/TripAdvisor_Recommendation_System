@@ -5,3 +5,5 @@ scikit-learn
 regex 
 nltk 
 rank-bm25
+gensim 
+sentence-transformers
