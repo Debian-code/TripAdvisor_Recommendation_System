@@ -43,17 +43,10 @@ def get_corpus_tokens(reviews : pd.DataFrame) -> list[list[str]]:
 
 
 def processing_data(reviews : pd.DataFrame,tripadvisor : pd.DataFrame) -> pd.DataFrame:
-    first_join=reviews.merge(tripadvisor,left_on="idplace",right_on="id",how="outer")[["idplace","langue","typeR","activiteSubCategorie","activiteSubType","restaurantTypeCuisine","priceRange"]]
+    first_join=reviews.merge(tripadvisor,left_on="idplace",right_on="id",how="outer")[["idplace","nom","review","langue","typeR","activiteSubCategorie","activiteSubType","restaurantTypeCuisine","priceRange"]]
     first_join=first_join[first_join["langue"]=="en"]
     first_join.drop("langue",axis=1,inplace=True)
     return first_join
 
-def bm25_model(reviews : pd.DataFrame) -> BM25Okapi:
-    corpus = get_corpus_tokens(reviews)
-    bm25 = BM25Okapi(corpus)
-    return bm25
 
-def bm25_score(query: str, bm25_model: BM25Okapi) -> float:
-    scores=bm25_model.get_scores(tokenize(query))
-    return scores
 
