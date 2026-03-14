@@ -128,36 +128,6 @@ pip install rank-bm25 scikit-learn gensim sentence-transformers pandas numpy
 
 ---
 
-## Usage
-
-### Run a specific model
-
-```bash
-# BM25 baseline
-python src/bm25.py
-
-# TF-IDF
-python src/tfidf.py
-
-# Word2Vec
-python src/word2vec.py
-
-# SBERT
-python src/sbert.py
-```
-
-### Evaluate results
-
-```bash
-python src/evaluation.py
-```
-
-### Run the full pipeline interactively
-
-Open `notebook.ipynb` for BM25 and TF-IDF experiments, or `notebook_demo.ipynb` for a walkthrough demo.
-
----
-
 ## Results
 
 All models were evaluated on 917 queries at two granularity levels:
