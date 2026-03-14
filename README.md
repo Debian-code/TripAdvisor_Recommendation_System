@@ -75,7 +75,7 @@ Each place is represented as a TF-IDF vector over its concatenated reviews. Cosi
 
 A shallow neural network is trained to project words into a dense lower-dimensional space. Place representations are built by averaging word vectors, then compared with cosine similarity:
 
-$$\text{cosine\_similarity}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}$$
+$$\frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}$$
 
 **Strengths:** fast to train, simple, no need for labeled data.  
 **Limitations:** static embeddings — the word *"bank"* has the same vector regardless of context; embeddings cluster tightly, reducing discriminative power for fine-grained retrieval.
